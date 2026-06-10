@@ -1,0 +1,25 @@
+"Street Prefix","Tipo de vía"
+"Please select a %1.","Por favor seleccione el %1."
+"General","General"
+"Enable","Activar"
+"Required","Obligatorio"
+"Field Label","Etiqueta del campo"
+"Prefix Options","Opciones de tipo de vía"
+"Option","Opción"
+"Add Option","Agregar opción"
+"Adds a street prefix selector (e.g. Street, Avenue) to customer addresses
+and checkout.","Agrega un selector de tipo de vía (ej.: Calle, Avenida) a las direcciones del cliente y al checkout."
+"Enable the street prefix field on the storefront.","Activa el campo de tipo de vía en la tienda."
+"Require customers to select a street prefix.","Exige que el cliente seleccione un tipo de vía."
+"Add one street type per row.
+Examples: Street, Avenue, Lane, Road, Square.","Agregue un tipo de vía por línea. Ejemplos: Calle, Avenida, Paseo, Camino, Plaza y Carretera."
+"Address Templates","Plantillas de dirección"
+"Customize how addresses are displayed in orders, emails, invoices,
+and the customer account.","Personalice cómo se muestran las direcciones en pedidos, correos, facturas y la cuenta del cliente."
+"HTML Example","Ejemplo HTML"
+"Open <strong>Stores &gt; Configuration &gt; Customers &gt;
+Customer Configuration &gt; Address Templates</strong>
+and edit the Text, HTML, PDF, or One Line template.<br/><br/>
+<strong>Attribute created by this module:</strong> <code>street_prefix</code> (customer address).<br/><br/>
+Example:<br/>
+<code>{{depend street_prefix}}{{var street_prefix}}{{/depend}}{{if street1}}{{var street1}}{{/if}}</code>","Abra <strong>Tiendas &gt; Configuración &gt; Clientes &gt; Configuración de Cliente &gt; Plantillas de dirección</strong> y edite la plantilla Texto, HTML, PDF o Una línea.<br/><br/><strong>Atributo creado por este módulo:</strong> <code>street_prefix</code> (dirección del cliente).<br/><br/>Agregue antes de la primera línea de la calle:<br/><code>{{depend street_prefix}}{{var street_prefix}}{{/depend}}{{if street1}}{{var street1}}{{/if}}</code>"

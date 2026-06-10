@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="customerstreetprefix" translate="label" sortOrder="50"
+                 showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Street Prefix</label>
+            <tab>systemcode</tab>
+            <resource>SystemCode_CustomerStreetPrefix::config</resource>
+            <group id="general" translate="label comment" sortOrder="10"
+                   showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General</label>
+                <comment><![CDATA[Adds a street prefix selector (e.g. Street, Avenue) to customer addresses
+and checkout.]]></comment>
+                <field id="enabled" translate="label comment" type="select" sortOrder="10"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable the street prefix field on the storefront.</comment>
+                </field>
+                <field id="required" translate="label comment" type="select" sortOrder="20"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Required</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                    <comment>Require customers to select a street prefix.</comment>
+                </field>
+                <field id="field_label" translate="label comment" type="text" sortOrder="25"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Field Label</label>
+                    <validate>required-entry</validate>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                </field>
+                <field id="prefix_options" translate="label comment" sortOrder="30"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Prefix Options</label>
+                    <frontend_model>SystemCode\CustomerStreetPrefix\Block\Adminhtml\Form\Field\PrefixOptions</frontend_model>
+                    <backend_model>SystemCode\CustomerStreetPrefix\Model\Config\Backend\PrefixOptions</backend_model>
+                    <depends>
+                        <field id="enabled">1</field>
+                    </depends>
+                    <comment>Add one street type per row.
+Examples: Street, Avenue, Lane, Road, Square.</comment>
+                </field>
+            </group>
+            <group id="address_templates" translate="label comment" sortOrder="40"
+                   showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Address Templates</label>
+                <comment><![CDATA[Customize how addresses are displayed in orders, emails, invoices,
+and the customer account.]]></comment>
+                <depends>
+                    <field id="enabled">1</field>
+                </depends>
+                <field id="address_templates_html_example" translate="label comment" type="label" sortOrder="10"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>HTML Example</label>
+                    <comment><![CDATA[Open <strong>Stores &gt; Configuration &gt; Customers &gt;
+Customer Configuration &gt; Address Templates</strong>
+and edit the Text, HTML, PDF, or One Line template.<br/><br/>
+<strong>Attribute created by this module:</strong> <code>street_prefix</code> (customer address).<br/><br/>
+Example:<br/>
+<code>{{depend street_prefix}}{{var street_prefix}}{{/depend}}{{if street1}}{{var street1}}{{/if}}</code>]]></comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="SystemCode\CustomerStreetPrefix\Api\ConfigInterface"
+                type="SystemCode\CustomerStreetPrefix\Model\Config"/>
+    <type name="Magento\Checkout\Block\Checkout\LayoutProcessor">
+        <plugin name="systemcode_customerstreetprefix_layout_processor"
+                type="SystemCode\CustomerStreetPrefix\Plugin\Checkout\LayoutProcessor"
+                sortOrder="110"/>
+    </type>
+    <type name="Magento\Checkout\Model\ShippingInformationManagement">
+        <plugin name="systemcode_customerstreetprefix_shipping_information"
+                type="SystemCode\CustomerStreetPrefix\Plugin\Checkout\ShippingInformationManagementPlugin"
+                sortOrder="10"/>
+    </type>
+    <type name="Magento\Customer\Block\Address\Edit">
+        <plugin name="systemcode_customerstreetprefix_address_edit"
+                type="SystemCode\CustomerStreetPrefix\Plugin\Block\Address\EditPlugin"
+                sortOrder="110"/>
+    </type>
+    <type name="Magento\Customer\Block\Form\Register">
+        <plugin name="systemcode_customerstreetprefix_register"
+                type="SystemCode\CustomerStreetPrefix\Plugin\Block\Form\RegisterPlugin"
+                sortOrder="110"/>
+    </type>
+    <type name="Magento\Quote\Model\ShippingAddressManagement">
+        <plugin name="systemcode_customerstreetprefix_shipping_address"
+                type="SystemCode\CustomerStreetPrefix\Plugin\Quote\AddressAssignPlugin"
+                sortOrder="10"/>
+    </type>
+    <type name="Magento\Quote\Model\BillingAddressManagement">
+        <plugin name="systemcode_customerstreetprefix_billing_address"
+                type="SystemCode\CustomerStreetPrefix\Plugin\Quote\AddressAssignPlugin"
+                sortOrder="10"/>
+    </type>
+    <type name="Magento\Quote\Model\Quote\Address\ToOrderAddress">
+        <plugin name="systemcode_customerstreetprefix_to_order_address"
+                type="SystemCode\CustomerStreetPrefix\Plugin\Quote\ToOrderAddressPlugin"
+                sortOrder="10"/>
+    </type>
+    <type name="Magento\Sales\Model\Order\Address">
+        <plugin name="systemcode_customerstreetprefix_order_address_extension"
+                type="SystemCode\CustomerStreetPrefix\Plugin\Api\OrderAddressExtensionPlugin"
+                sortOrder="10"/>
+    </type>
+    <type name="Magento\Quote\Model\Quote\Address">
+        <plugin name="systemcode_customerstreetprefix_quote_address_extension"
+                type="SystemCode\CustomerStreetPrefix\Plugin\Api\QuoteAddressExtensionPlugin"
+                sortOrder="10"/>
+        <plugin name="systemcode_customerstreetprefix_export_customer_address"
+                type="SystemCode\CustomerStreetPrefix\Plugin\Quote\ExportCustomerAddressPlugin"
+                sortOrder="10"/>
+        <plugin name="systemcode_customerstreetprefix_quote_address_save"
+                type="SystemCode\CustomerStreetPrefix\Plugin\Quote\QuoteAddressSavePlugin"
+                sortOrder="10"/>
+    </type>
+    <type name="Magento\Customer\Model\Address">
+        <plugin name="systemcode_customerstreetprefix_customer_address_extension"
+                type="SystemCode\CustomerStreetPrefix\Plugin\Api\CustomerAddressExtensionPlugin"
+                sortOrder="10"/>
+    </type>
+    <type name="Magento\Eav\Model\Validator\Attribute\Data">
+        <plugin name="systemcode_customerstreetprefix_eav_data_validator"
+                type="SystemCode\CustomerStreetPrefix\Plugin\Eav\Validator\AttributeDataPlugin"
+                sortOrder="10"/>
+    </type>
+    <type name="Magento\Eav\Model\Entity\Attribute\Backend\AbstractBackend">
+        <plugin name="systemcode_customerstreetprefix_eav_backend_validator"
+                type="SystemCode\CustomerStreetPrefix\Plugin\Eav\Entity\Attribute\BackendPlugin"
+                sortOrder="10"/>
+    </type>
+    <type name="Magento\Quote\Model\Address\Validator\AddressAttributeValidator">
+        <plugin name="systemcode_customerstreetprefix_quote_address_attribute_validator"
+                type="SystemCode\CustomerStreetPrefix\Plugin\Quote\Address\Validator\AddressAttributeValidatorPlugin"
+                sortOrder="10"/>
+    </type>
+</config>

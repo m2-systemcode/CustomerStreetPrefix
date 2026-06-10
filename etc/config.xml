@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <customerstreetprefix>
+            <general>
+                <enabled>0</enabled>
+                <required>1</required>
+                <field_label>Street Prefix</field_label>
+                <prefix_options></prefix_options>
+            </general>
+        </customerstreetprefix>
+    </default>
+</config>

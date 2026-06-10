@@ -1,0 +1,33 @@
+"Street Prefix","Street Prefix"
+"Please select a %1.","Please select a %1."
+"General","General"
+"Enable","Enable"
+"Required","Required"
+"Field Label","Field Label"
+"Prefix Options","Prefix Options"
+"Option","Option"
+"Add Option","Add Option"
+"Adds a street prefix selector (e.g. Street, Avenue) to customer addresses
+and checkout.","Adds a street prefix selector (e.g. Street, Avenue) to customer addresses
+and checkout."
+"Enable the street prefix field on the storefront.","Enable the street prefix field on the storefront."
+"Require customers to select a street prefix.","Require customers to select a street prefix."
+"Add one street type per row.
+Examples: Street, Avenue, Lane, Road, Square.","Add one street type per row.
+Examples: Street, Avenue, Lane, Road, Square."
+"Address Templates","Address Templates"
+"Customize how addresses are displayed in orders, emails, invoices,
+and the customer account.","Customize how addresses are displayed in orders, emails, invoices,
+and the customer account."
+"HTML Example","HTML Example"
+"Open <strong>Stores &gt; Configuration &gt; Customers &gt;
+Customer Configuration &gt; Address Templates</strong>
+and edit the Text, HTML, PDF, or One Line template.<br/><br/>
+<strong>Attribute created by this module:</strong> <code>street_prefix</code> (customer address).<br/><br/>
+Example:<br/>
+<code>{{depend street_prefix}}{{var street_prefix}}{{/depend}}{{if street1}}{{var street1}}{{/if}}</code>","Open <strong>Stores &gt; Configuration &gt; Customers &gt;
+Customer Configuration &gt; Address Templates</strong>
+and edit the Text, HTML, PDF, or One Line template.<br/><br/>
+<strong>Attribute created by this module:</strong> <code>street_prefix</code> (customer address).<br/><br/>
+Example:<br/>
+<code>{{depend street_prefix}}{{var street_prefix}}{{/depend}}{{if street1}}{{var street1}}{{/if}}</code>"

@@ -1,0 +1,33 @@
+<?php
+/** @var \Magento\Framework\View\Element\Template $block */
+/** @var \SystemCode\CustomerStreetPrefix\ViewModel\StreetPrefix $viewModel */
+/** @var \Magento\Framework\Escaper $escaper */
+
+$viewModel = $block->getViewModel();
+
+if (!$viewModel->shouldRender()) {
+    return;
+}
+
+$currentValue = (string) $block->getData('current_value');
+$inputName = (string) ($block->getData('input_name') ?: 'street_prefix');
+?>
+<div class="field street_prefix<?= $escaper->escapeHtmlAttr($viewModel->getRequiredFieldClass()) ?>">
+    <label class="label" for="street_prefix">
+        <span><?= $escaper->escapeHtml($viewModel->getLabel()) ?></span>
+    </label>
+    <div class="control">
+        <select id="street_prefix"
+                name="<?= $escaper->escapeHtmlAttr($inputName) ?>"
+                title="<?= $escaper->escapeHtmlAttr($viewModel->getLabel()) ?>"
+                class="select<?= $escaper->escapeHtmlAttr($viewModel->getRequiredInputClass()) ?>"
+                <?php if ($viewModel->isRequired()): ?>aria-required="true"<?php endif; ?>>
+            <?php foreach ($viewModel->getOptions() as $option): ?>
+                <option value="<?= $escaper->escapeHtmlAttr($option['value']) ?>"
+                    <?= $currentValue === $option['value'] ? 'selected="selected"' : '' ?>>
+                    <?= $escaper->escapeHtml($option['label']) ?>
+                </option>
+            <?php endforeach; ?>
+        </select>
+    </div>
+</div>

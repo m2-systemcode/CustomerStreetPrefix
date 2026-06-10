@@ -1,0 +1,25 @@
+{
+    "name": "systemcode/customer-street-prefix",
+    "description": "Configurable street prefix for customer addresses.",
+    "type": "magento2-module",
+    "version": "1.0.0",
+    "license": [
+        "OSL-3.0"
+    ],
+    "require": {
+        "systemcode/base": "^2.0",
+        "systemcode/customer": "^1.0",
+        "magento/module-customer": "*",
+        "magento/module-checkout": "*",
+        "magento/module-quote": "*",
+        "magento/module-sales": "*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "SystemCode\\CustomerStreetPrefix\\": ""
+        }
+    }
+}

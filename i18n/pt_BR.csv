@@ -1,0 +1,25 @@
+"Street Prefix","Logradouro"
+"Please select a %1.","Por favor selecione o %1."
+"General","Geral"
+"Enable","Ativar"
+"Required","Obrigatório"
+"Field Label","Rótulo do Campo"
+"Prefix Options","Opções de Logradouro"
+"Option","Opção"
+"Add Option","Adicionar Opção"
+"Adds a street prefix selector (e.g. Street, Avenue) to customer addresses
+and checkout.","Adiciona um seletor de prefixo de logradouro (ex.: Rua, Avenida) aos endereços do cliente e ao checkout."
+"Enable the street prefix field on the storefront.","Ativa o campo de logradouro na loja."
+"Require customers to select a street prefix.","Exige que o cliente selecione um logradouro."
+"Add one street type per row.
+Examples: Street, Avenue, Lane, Road, Square.","Adicione um tipo de logradouro por linha. Exemplos: Rua, Avenida, Alameda, Travessa, Praça e Rodovia."
+"Address Templates","Modelos de Endereço"
+"Customize how addresses are displayed in orders, emails, invoices,
+and the customer account.","Personalize como os endereços são exibidos em pedidos, e-mails, faturas e na conta do cliente."
+"HTML Example","Exemplo HTML"
+"Open <strong>Stores &gt; Configuration &gt; Customers &gt;
+Customer Configuration &gt; Address Templates</strong>
+and edit the Text, HTML, PDF, or One Line template.<br/><br/>
+<strong>Attribute created by this module:</strong> <code>street_prefix</code> (customer address).<br/><br/>
+Example:<br/>
+<code>{{depend street_prefix}}{{var street_prefix}}{{/depend}}{{if street1}}{{var street1}}{{/if}}</code>","Acesse <strong>Lojas &gt; Configuração &gt; Clientes &gt; Configuração de Cliente &gt; Modelos de Endereço</strong> e edite o modelo Texto, HTML, PDF ou Uma Linha.<br/><br/><strong>Atributo criado por este módulo:</strong> <code>street_prefix</code> (endereço do cliente).<br/><br/>Adicione antes da primeira linha do endereço:<br/><code>{{depend street_prefix}}{{var street_prefix}}{{/depend}}{{if street1}}{{var street1}}{{/if}}</code>"
